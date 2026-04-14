@@ -1,0 +1,7 @@
+.DS_Store
+.venv/
+__pycache__/
+imagens/cropped_faces/
+imagens/treino/
+imagens/teste/
+classificadores/*.dat
