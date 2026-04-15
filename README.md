@@ -1,30 +1,42 @@
-# OpenCV Face Recognition Lab
+# cv-face-recognition-lab
 
-Laboratorio de reconhecimento facial com OpenCV, comparando Eigenfaces, Fisherfaces e LBPH a partir de um notebook.
+Laboratorio de reconhecimento facial com OpenCV, cobrindo preparacao de imagens, extracao de faces e avaliacao de reconhecedores classicos.
 
-## Arquivos
+## Conteudo
 
-- `face_recognition_lab.ipynb`: notebook principal do estudo
-- `classificadores/haarcascade_frontalface_default.xml`: cascade para deteccao facial
-- `imagens/`: imagens de exemplo usadas no laboratorio
+- `face_recognition_lab.ipynb`: notebook principal do experimento.
+- `classificadores/`: classificadores auxiliares, como Haar Cascade.
+- `imagens/`: amostras reduzidas usadas para demonstracao.
+- `requirements.txt`: dependencias do projeto.
 
-## Como executar
+## Objetivo
+
+O repositorio demonstra um fluxo didatico de reconhecimento facial:
+
+- leitura e organizacao de imagens;
+- deteccao facial com classificadores pre-treinados;
+- padronizacao de amostras;
+- treino e comparacao de metodos classicos;
+- avaliacao com metricas de classificacao.
+
+## Dados e Artefatos
+
+O dataset completo e arquivos pesados de landmarks nao foram publicados. A versao do repositorio mantem apenas uma amostra e recursos suficientes para estudo do notebook.
+
+## Como Executar
+
+Instale as dependencias:
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
 pip install -r requirements.txt
+```
+
+Abra o notebook:
+
+```bash
 jupyter notebook face_recognition_lab.ipynb
 ```
 
-## Dependencias
+## Cuidados
 
-O notebook usa OpenCV com modulo `face`, alem de `matplotlib` e `scikit-learn`.
-
-## Nota de publicacao
-
-Este repositorio foi preparado de forma conservadora para GitHub:
-
-- o dataset completo de faces foi removido
-- os arquivos `shape_predictor_5_face_landmarks.dat` e `shape_predictor_68_face_landmarks.dat` foram removidos por tamanho e por serem artefatos externos
-- o notebook foi mantido como material de estudo, mas pode exigir que voce reponha localmente os datasets e modelos auxiliares para reproduzir todo o fluxo original
+Reconhecimento facial envolve privacidade e vieses. Este repositorio deve ser tratado como estudo tecnico, nao como solucao pronta para identificacao de pessoas em ambiente real.
